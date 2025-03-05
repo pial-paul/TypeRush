@@ -1,0 +1,241 @@
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global styles for all elements */
+*{
+  margin: 0; /* Removing default margin */
+  padding: 0; /* Removing default padding */
+  box-sizing: border-box; /* Ensures padding and border do not affect element's width */
+  font-family: 'Poppins', sans-serif; /* Applying the Poppins font */
+}
+
+/* Styling for the body of the page */
+body{
+  display: flex; /* Flexbox layout */
+  padding: 0 10px; /* Horizontal padding */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  min-height: 100vh; /* Makes the body take up the full viewport height */
+  background: #17A589; /* Background color */
+}
+
+/* Styling for text selection */
+::selection{
+  color: #fff; /* Text color when selected */
+  background: #17a589; /* Background color when selected */
+}
+
+/* Wrapper styling for the main content */
+.wrapper{
+  width: 770px; /* Width of the wrapper */
+  padding: 35px; /* Padding around content */
+  padding-bottom: 15px; /* Extra padding at the bottom */
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05); /* Light shadow around the wrapper */
+}
+
+/* Hides the input field */
+.wrapper .input-field{
+  opacity: 0; /* Makes it invisible */
+  z-index: -999; /* Moves it behind other elements */
+  position: absolute; /* Positions it absolutely */
+}
+
+/* Styling for the content box */
+.wrapper .content-box{
+  padding: 13px 20px 0; /* Padding for content */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #bfbfbf; /* Light border */
+}
+
+/* Styling for the text that the user has to type */
+.content-box .typing-text{
+  overflow: hidden; /* Hides overflow */
+  max-height: 256px; /* Maximum height */
+}
+
+/* Hides the scrollbar */
+.typing-text::-webkit-scrollbar{
+  width: 0; /* Hides scrollbar */
+}
+
+/* Styling for the text inside the typing box */
+.typing-text p{
+  font-size: 21px; /* Font size */
+  text-align: justify; /* Justify text alignment */
+  letter-spacing: 1px; /* Spacing between letters */
+  word-break: break-all; /* Breaks words if needed */
+}
+
+/* Styling for the spans within the typing text */
+.typing-text p span{
+  position: relative; /* Positioning for active state */
+}
+
+/* Correct text styling */
+.typing-text p span.correct{
+  color: #2fcd1d; /* Green color for correct words */
+}
+
+/* Incorrect text styling */
+.typing-text p span.incorrect{
+  color: #cb3439; /* Red color for incorrect words */
+  outline: 1px solid #fff; /* White outline */
+  background: #ffc0cb; /* Light pink background */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Active word styling (the word currently being typed) */
+.typing-text p span.active{
+  color: #00ddff; /* Blue color for active word */
+}
+
+/* Animation for the active word underline */
+.typing-text p span.active::before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 5px;
+  background: #17A2B8; /* Blue color */
+  animation: blink 1s ease-in-out infinite; /* Blinking effect */
+}
+
+/* Keyframe for blinking effect */
+@keyframes blink{
+  50%{ 
+    opacity: 1; /* Makes the underline visible */
+  }
+}
+
+/* Styling for the content section under the typing box */
+.content-box .content{
+  margin-top: 17px; /* Margin at the top */
+  display: flex; /* Flexbox layout */
+  padding: 12px 0; /* Vertical padding */
+  flex-wrap: wrap; /* Wraps elements if needed */
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Distributes space between items */
+  border-top: 1px solid #bfbfbf; /* Light border on top */
+}
+
+/* Button styling */
+.content button{
+  outline: none; /* Removes outline */
+  border: none; /* Removes border */
+  width: 105px; /* Width of the button */
+  color: #fff; /* White text */
+  padding: 8px 0; /* Padding inside button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  background: #17A589; /* Background color */
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+/* Button active state (when clicked) */
+.content button:active{
+  transform: scale(0.97); /* Slightly scales the button down */
+}
+
+/* Result details section styling */
+.content .result-details{
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wraps elements if needed */
+  align-items: center; /* Centers items vertically */
+  width: calc(100% - 140px); /* Takes up the remaining width */
+  justify-content: space-between; /* Distributes space between items */
+}
+
+/* Styling for each result item */
+.result-details li{
+  display: flex; /* Flexbox layout */
+  height: 20px; /* Height of each item */
+  list-style: none; /* Removes bullet points */
+  position: relative; /* Positions elements */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Styling for all result items except the first one */
+.result-details li:not(:first-child){
+  padding-left: 22px; /* Left padding */
+  border-left: 1px solid #bfbfbf; /* Light border on the left */
+}
+
+/* Styling for result labels */
+.result-details li p{
+  font-size: 19px; /* Font size */
+}
+
+/* Styling for result values */
+.result-details li span{
+  display: block; /* Makes span block-level */
+  font-size: 20px; /* Font size */
+  margin-left: 10px; /* Left margin */
+}
+
+/* Bold result values */
+li span b{
+  font-weight: 500; /* Makes the text bold */
+}
+
+/* Styling for result items except the first */
+li:not(:first-child) span{
+  font-weight: 500; /* Makes the text bold */
+}
+
+/* Media queries for responsiveness */
+
+/* For screens with a width of 745px or less */
+@media (max-width: 745px) {
+  .wrapper{
+    padding: 20px; /* Adjust padding */
+  }
+  .content-box .content{
+    padding: 20px 0; /* Adjust padding */
+  }
+  .content-box .typing-text{
+    max-height: 100%; /* Removes max height */
+  }
+  .typing-text p{
+    font-size: 19px; /* Adjust font size */
+    text-align: left; /* Align text to the left */
+  }
+  .content button{
+    width: 100%; /* Full-width button */
+    font-size: 15px; /* Adjust font size */
+    padding: 10px 0; /* Adjust padding */
+    margin-top: 20px; /* Margin at the top */
+  }
+  .content .result-details{
+    width: 100%; /* Full-width result details */
+  }
+  .result-details li:not(:first-child){
+    border-left: 0; /* Removes left border */
+    padding: 0; /* Removes padding */
+  }
+  .result-details li p, 
+  .result-details li span{
+    font-size: 17px; /* Adjust font size */
+  }
+}
+
+/* For screens with a width of 518px or less */
+@media (max-width: 518px) {
+  .wrapper .content-box{
+    padding: 10px 15px 0; /* Adjust padding */
+  }
+  .typing-text p{
+    font-size: 18px; /* Adjust font size */
+  }
+  .result-details li{
+    margin-bottom: 10px; /* Adds bottom margin */
+  }
+  .content button{
+    margin-top: 10px; /* Adds top margin */
+  }
+}

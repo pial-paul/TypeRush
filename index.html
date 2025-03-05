@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Meta information about the document -->
+    <meta charset="utf-8" />
+    <title>Type Rush - A Speed Typing Game</title>
+    <!-- Title of the game -->
+
+    <!-- Linking the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Main wrapper for the content -->
+
+      <!-- Input field for the user to type into -->
+      <input type="text" class="input-field" />
+
+      <!-- Content box holding the typing text and results -->
+      <div class="content-box">
+        <!-- Box showing the text the user needs to type -->
+        <div class="typing-text">
+          <p></p>
+          <!-- Placeholder for the text to be typed -->
+        </div>
+
+        <!-- Content section for results and the try again button -->
+        <div class="content">
+          <!-- List displaying result details (time left, mistakes, WPM, CPM) -->
+          <ul class="result-details">
+            <li class="time">
+              <p>Time Left:</p>
+              <span><b>60</b>s</span>
+              <!-- Timer display (60 seconds initially) -->
+            </li>
+            <li class="mistake">
+              <p>Mistakes:</p>
+              <span>0</span>
+              <!-- Mistake counter (starts at 0) -->
+            </li>
+            <li class="wpm">
+              <p>WPM:</p>
+              <span>0</span>
+              <!-- Words per minute (starts at 0) -->
+            </li>
+            <li class="cpm">
+              <p>CPM:</p>
+              <span>0</span>
+              <!-- Characters per minute (starts at 0) -->
+            </li>
+          </ul>
+
+          <!-- Button to restart the game -->
+          <button>Try Again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External JavaScript files for game functionality -->
+    <script src="JS/paragraphs.js"></script>
+    <!-- Script to manage typing paragraphs -->
+    <script src="JS/script.js"></script>
+    <!-- Main script for the game logic -->
+  </body>
+</html>
