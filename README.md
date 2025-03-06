@@ -45,8 +45,8 @@ TypeRush/
 4. When the timer reaches 0, the game ends, and your final score is displayed.
 5. Click the "Try Again" button to restart.
 
-## Demo
-(Will be updated)
+## LIVE Demo
+https://pial-paul.github.io/TypeRush/
 
 ## Contribution
 Feel free to contribute to this project by submitting issues or pull requests.
