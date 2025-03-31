@@ -46,7 +46,10 @@ TypeRush/
 5. Click the "Try Again" button to restart.
 
 ## LIVE Demo
-https://pial-paul.github.io/TypeRush/
+- 🔗 https://pial-paul.github.io/TypeRush/
+- 🎥 https://github.com/user-attachments/assets/a277a7e5-fe56-4669-bc48-5e2ebfec7b6d
+
+
 
 ## Contribution
 Feel free to contribute to this project by submitting issues or pull requests.
