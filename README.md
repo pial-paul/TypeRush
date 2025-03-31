@@ -48,6 +48,7 @@ TypeRush/
 ## LIVE Demo
 - 🔗 https://pial-paul.github.io/TypeRush/
 - 🎥 https://github.com/user-attachments/assets/28951ecc-9d91-47aa-bae8-a3de09c3ccb7
+  https://github.com/user-attachments/assets/28951ecc-9d91-47aa-bae8-a3de09c3ccb7
 
 
 
